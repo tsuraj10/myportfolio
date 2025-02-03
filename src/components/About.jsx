@@ -7,7 +7,7 @@ const About = () => {
         <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
         <div
       className="min-h-10 min-w-10 bg-blue-300"
-      style={{ backgroundImage: "url('/myportfolio/bg1.jpg')" }}    
+      style={{ backgroundImage: "url('bg1.jpg')" }}    
         >
 
 </div>
