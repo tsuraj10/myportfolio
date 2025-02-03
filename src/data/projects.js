@@ -1,6 +1,6 @@
 export const projects = [
     {
-      title: "Project 1",
+      title: "Apple Project 1",
       description: "A brief description of project 1 and its key features",
       tech: ["React", "Node.js", "MongoDB"],
     },
