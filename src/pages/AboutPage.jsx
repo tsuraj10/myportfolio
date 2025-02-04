@@ -1,15 +1,17 @@
 import React from 'react';
 
 import About from '../components/About';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 import Layout from '../components/Layout';
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Layout>
+    <div className="min-h-screen ">
+      <Navbar />
       <About />
-      </Layout>
+      <Footer />
     </div>
   );
 };

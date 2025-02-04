@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-8">
+    <footer className='py-3'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-gray-500">
-          © {new Date().getFullYear()} Your Name. All rights reserved.
+        <p className="text-1xl text-center text-white">
+          © {new Date().getFullYear()} Suraj Thapa. All rights reserved.
         </p>
       </div>
     </footer>

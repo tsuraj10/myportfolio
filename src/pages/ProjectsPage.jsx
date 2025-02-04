@@ -5,10 +5,11 @@ import Footer from '../components/Footer';
 import Layout from '../components/Layout';
 const ProjectsPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Layout>
+    <div className="min-h-screen ">
+      
+      <Navbar/>
       <Projects />
-      </Layout>
+      <Footer/>
     </div>
   );
 };
