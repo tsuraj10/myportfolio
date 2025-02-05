@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -9,6 +10,7 @@ const Hero = () => {
         <div className="flex-1 pr-4">
           <h1 className="text-3xl mb-4 font-bold">Welcome to My Portfolio!</h1>
           <p className="text-xl mb-8">Hi, I am Suraj Thapa, a Web Developer.</p>
+          {/* Keep <a> tag for external resources like CV download */}
           <a
             href="/mycv.pdf"
             download
@@ -29,29 +31,29 @@ const Hero = () => {
       </div>
 
       <div className="relative z-20 flex items-center justify-center flex-wrap max-w-2xl mt-12">
-        <a
-          href="/about"
+        <Link
+          to="/about"
           className="m-4 flex-basis-45 p-6 text-left no-underline border border-gray-300 rounded-md shadow-lg transition-transform duration-150 hover:text-blue-600 hover:border-blue-600 hover:scale-105"
         >
           <h3 className="mb-4 text-xl">About Me &rarr;</h3>
           <p className="text-lg">Learn more about who I am and what I do.</p>
-        </a>
+        </Link>
 
-        <a
-          href="/projects"
+        <Link
+          to="/projects"
           className="m-4 flex-basis-45 p-6 text-left no-underline border border-gray-300 rounded-md shadow-lg transition-transform duration-150 hover:text-blue-600 hover:border-blue-600 hover:scale-105"
         >
           <h3 className="mb-4 text-xl">Projects &rarr;</h3>
           <p className="text-lg">Check out some of my latest work.</p>
-        </a>
+        </Link>
 
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="m-4 flex-basis-45 p-6 text-left no-underline border border-gray-300 rounded-md shadow-lg transition-transform duration-150 hover:text-blue-600 hover:border-blue-600 hover:scale-105"
         >
           <h3 className="mb-4 text-xl">Contact &rarr;</h3>
           <p className="text-lg">Get in touch with me.</p>
-        </a>
+        </Link>
       </div>
     </main>
   );
