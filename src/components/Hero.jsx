@@ -19,15 +19,16 @@ const Hero = () => {
             Download CV
           </a>
         </div>
-        <div className="flex-shrink-0">
-          <img
-            src="/surajj.jpg"
-            alt="My Image"
-            width={330}
-            height={350}
-            className="rounded-full shadow-lg"
-          />
-        </div>
+        <div className="flex justify-center sm:justify-start flex-shrink-0">
+  <img
+    src="/surajj.jpg"
+    alt="My Image"
+    width={330}
+    height={350}
+    className="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full shadow-lg object-cover"
+  />
+</div>
+
       </div>
 
       <div className="relative z-20 flex items-center justify-center flex-wrap max-w-2xl mt-12">
