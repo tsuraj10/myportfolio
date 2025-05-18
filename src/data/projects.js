@@ -13,4 +13,11 @@ export const projects = [
       link: "https://tsuraj10.github.io/TodoApp/",
       imageUrl: "/project2.jpg",
     },
+    {
+      title: "Blog App",
+      description: "This is the simple blog website to view blogs and add blogs if authenticate user.",
+      tech: ["JavaScript"],
+      link: "https://tsuraj10.github.io/Blog/",
+      imageUrl: "/project3.jpg",
+    },
   ];
