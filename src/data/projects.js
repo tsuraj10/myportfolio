@@ -18,6 +18,6 @@ export const projects = [
       description: "This is the simple blog website to view blogs and add blogs if authenticate user.",
       tech: ["JavaScript"],
       link: "https://tsuraj10.github.io/Blog/",
-      imageUrl: "/project3.jpg",
+      imageUrl: "/project3.png",
     },
   ];
