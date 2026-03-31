@@ -1,13 +1,14 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <div className="min-h-screen ">
+    <div className="flex flex-col min-h-screen dynamic-bg">
       <Navbar />
-      <Hero />
+      <div className="flex-grow">
+        <Hero />
+      </div>
       <Footer />
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import emailjs from "emailjs-com";
 
@@ -21,52 +21,54 @@ const Contact = () => {
 
     setLoading(true);
 
-    const serviceID = "service_royzwbn";     // <-- Replace with your actual service ID
-    const templateID = "template_ol6ud99";   // <-- Replace with your actual template ID
-    const publicKey = "Yw7lI5Kq82jCEnqct";     // <-- Replace with your actual public key
+    const serviceID = "service_royzwbn"; // <-- Replace with your actual service ID
+    const templateID = "template_ol6ud99"; // <-- Replace with your actual template ID
+    const publicKey = "Yw7lI5Kq82jCEnqct"; // <-- Replace with your actual public key
 
     const templateParams = {
       title: "New Contact Message", // this will fill {{title}}
-      name: name,                   // this will fill {{name}}
-      email: email,                 // this will fill {{email}}
-      message: message,             // this will fill {{message}}
+      name: name, // this will fill {{name}}
+      email: email, // this will fill {{email}}
+      message: message, // this will fill {{message}}
     };
 
-    emailjs.send(serviceID, templateID, templateParams, publicKey)
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setSuccess("Message sent successfully!");
-          setError("");
-          setName("");
-          setEmail("");
-          setMessage("");
-          setLoading(false);
-        },
-        (err) => {
-          console.log("FAILED...", err);
-          setError("Something went wrong. Please try again later.");
-          setSuccess("");
-          setLoading(false);
-        }
-      );
+    emailjs.send(serviceID, templateID, templateParams, publicKey).then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        setSuccess("Message sent successfully!");
+        setError("");
+        setName("");
+        setEmail("");
+        setMessage("");
+        setLoading(false);
+      },
+      (err) => {
+        console.log("FAILED...", err);
+        setError("Something went wrong. Please try again later.");
+        setSuccess("");
+        setLoading(false);
+      },
+    );
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
-      <main className="text-white flex flex-col items-center justify-center p-8">
-        <h1 className="text-4xl mb-4">Contact Me</h1>
-        <p className="text-xl mb-8 text-center">
+    <div className="flex flex-col items-center justify-center p-8 min-h-screen">
+      <main className="text-slate-100 flex flex-col items-center justify-center p-8">
+        <h1 className="text-4xl mb-4 text-cyan-200">Contact Me</h1>
+        <p className="text-xl mb-8 text-center text-slate-300">
           Feel free to reach out to me through the following methods.
         </p>
         <form
-          className="text-white w-full max-w-lg bg-gray-700 p-8 rounded-lg shadow-md"
+          className="w-full max-w-lg p-8 rounded-lg shadow-md text-slate-100 bg-slate-800/80 border border-slate-700"
           onSubmit={handleSubmit}
         >
           {success && <p className="text-green-400 mb-4">{success}</p>}
           {error && <p className="text-red-400 mb-4">{error}</p>}
           <div className="mb-6">
-            <label htmlFor="name" className="block mb-2 font-semibold">
+            <label
+              htmlFor="name"
+              className="block mb-2 font-semibold text-slate-200"
+            >
               Name
             </label>
             <input
@@ -75,11 +77,14 @@ const Contact = () => {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-600 rounded-md text-gray-800 focus:border-blue-500 focus:outline-none"
+              className="w-full px-3 py-2 border border-slate-600 rounded-md bg-slate-900 text-slate-100 focus:border-cyan-400 focus:outline-none"
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="email" className="block mb-2 font-semibold">
+            <label
+              htmlFor="email"
+              className="block mb-2 font-semibold text-slate-200"
+            >
               Email
             </label>
             <input
@@ -88,11 +93,14 @@ const Contact = () => {
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-600 rounded-md text-gray-800 focus:border-blue-500 focus:outline-none"
+              className="w-full px-3 py-2 border border-slate-600 rounded-md bg-slate-900 text-slate-100 focus:border-cyan-400 focus:outline-none"
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="message" className="block mb-2 font-semibold">
+            <label
+              htmlFor="message"
+              className="block mb-2 font-semibold text-slate-200"
+            >
               Message
             </label>
             <textarea
@@ -100,7 +108,7 @@ const Contact = () => {
               name="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-600 rounded-md text-gray-800 focus:border-blue-500 focus:outline-none resize-vertical min-h-40"
+              className="w-full px-3 py-2 border border-slate-600 rounded-md bg-slate-900 text-slate-100 focus:border-cyan-400 focus:outline-none resize-none min-h-40"
             ></textarea>
           </div>
           <button
@@ -111,9 +119,7 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-        <p className="text-xl mt-8 mb-4">
-          Or directly contact me through:
-        </p>
+        <p className="text-xl mt-8 mb-4">Or directly contact me through:</p>
         <div className="flex justify-center mt-6">
           <a
             href="https://www.facebook.com/suraj.thapa.9861015025"

@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import About from '../components/About';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import About from "../components/About";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen ">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <About />
+      <div className="flex-grow">
+        <About />
+      </div>
       <Footer />
     </div>
   );
